@@ -8,53 +8,69 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
   <title>Frontend Mentor | Results summary component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    h1, h2, h3, p{
+    h1,
+    h2,
+    h3,
+    p {
       font-family: 'Hanken Grotesk', sans-serif;
     }
-    .font1{
+
+    .font1 {
       color: #c9c2ff;
     }
-    .font2{
+
+    .font2 {
       font-size: 80px;
       color: #fff;
       margin: 0;
     }
-    .font3{
+
+    .font3 {
       color: #8a7cff;
       margin: 0;
     }
-    .font4{
+
+    .font4 {
       color: #fff;
     }
-    .font5{
+
+    .font5 {
       color: #d66569;
     }
-    .font6{
+
+    .font6 {
       color: #eebd56;
     }
-    .font7{
+
+    .font7 {
       color: #5aaf9c;
     }
-    .font8{
+
+    .font8 {
       color: #232997;
     }
-    .font-grey{
+
+    .font-grey {
       margin-left: -30px;
       color: rgba(0, 0, 0, 0.4);
     }
+
     body {
       width: 100vw;
       height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-direction: column;
     }
 
     .main-body {
@@ -86,7 +102,8 @@
       height: 100%;
       border-radius: 25px;
     }
-    .slab-hold{
+
+    .slab-hold {
       width: 80%;
       height: 65%;
       display: flex;
@@ -94,7 +111,8 @@
       align-items: center;
       justify-content: space-evenly;
     }
-    .btn{
+
+    .btn {
       background-color: #303b59;
       width: 73%;
       height: 50px;
@@ -107,9 +125,11 @@
       font-weight: bold;
       cursor: pointer;
     }
-    .btn:hover{
+
+    .btn:hover {
       background-color: #4c23ca;
     }
+
     .slab {
       width: 90%;
       height: 50px;
@@ -118,20 +138,25 @@
       justify-content: space-evenly;
       background-color: aqua;
       border-radius: 10px;
+
     }
 
-    .slab1{
+    .slab1 {
       background-color: rgba(214, 101, 105, 0.2);
     }
-    .slab2{
+
+    .slab2 {
       background-color: rgba(238, 189, 86, 0.2);
     }
-    .slab3{
+
+    .slab3 {
       background-color: rgba(90, 175, 156, 0.2);
     }
-    .slab4{
+
+    .slab4 {
       background-color: rgba(35, 41, 151, 0.2);
     }
+
     .box-right {
       display: flex;
       flex-direction: column;
@@ -141,6 +166,10 @@
       height: 100%;
     }
 
+    .box-right>h3{
+      text-align: start;
+    }
+
     .attribution {
       font-size: 11px;
       text-align: center;
@@ -148,6 +177,36 @@
 
     .attribution a {
       color: hsl(228, 45%, 44%);
+    }
+
+    @media screen and (max-width: 412px) {
+      body {
+        width: 100vw;
+        height: auto;
+        padding: 0;
+        margin: 0;
+      }
+
+      .main-body {
+        flex-direction: column;
+        width: 100vw;
+        height: auto;
+        padding: 0;
+        margin: 0;
+      }
+      .box-left{
+        width: 100%;
+        height: auto;
+        top: 0;
+        border-radius: 0 0 25px 25px;
+      }
+      .font1{
+        margin-top: 20px;
+      }
+      .box-right{
+        width: 100vw;
+        height: 50vh;
+      }
     }
   </style>
 </head>
@@ -162,26 +221,35 @@
       </div>
 
       <h2 class="font4">Great</h2>
-      <p class="font1" style="width: 60%; text-align: center;">You scored higher than 65% of the people who have taken these tests.</p>
+      <p class="font1" style="width: 60%; text-align: center;">You scored higher than 65% of the people who have taken
+        these tests.</p>
     </div>
     <div class="box-right">
       <h3>Summary</h3>
       <div class="slab-hold">
         <div class="slab slab1">
-          <p class="font5"><img src="./assets/images/icon-reaction.svg"> Reaction</p>
-          <p>80 <p class="font-grey">/ 100</p></p>
+          <p class="font5"><img src="./assets/images/icon-reaction.svg" alt="reaction"> Reaction</p>
+          <p>80
+          <p class="font-grey">/ 100</p>
+          </p>
         </div>
         <div class="slab slab2">
-          <p class="font6"> <img src="./assets/images/icon-memory.svg"> Memory</p>
-          <p>92 <p class="font-grey">/ 100</p></p>
+          <p class="font6"> <img src="./assets/images/icon-memory.svg" alt="memory"> Memory</p>
+          <p>92
+          <p class="font-grey">/ 100</p>
+          </p>
         </div>
         <div class="slab slab3">
-          <p class="font7"><img src="./assets/images/icon-verbal.svg"> Verbal</p>
-          <p>61 <p class="font-grey">/ 100</p></p>
+          <p class="font7"><img src="./assets/images/icon-verbal.svg" alt="verbal"> Verbal</p>
+          <p>61
+          <p class="font-grey">/ 100</p>
+          </p>
         </div>
         <div class="slab slab4">
-          <p class="font8"><img src="./assets/images/icon-visual.svg"> Visual</p>
-          <p>72 <p class="font-grey">/ 100</p></p>
+          <p class="font8"><img src="./assets/images/icon-visual.svg" alt="visual"> Visual</p>
+          <p>72
+          <p class="font-grey">/ 100</p>
+          </p>
         </div>
       </div>
       <button class="btn">
@@ -190,10 +258,10 @@
     </div>
   </div>
 
-  <!-- <div class="attribution">
+  <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div> -->
+  </div>
 </body>
 
 </html>
